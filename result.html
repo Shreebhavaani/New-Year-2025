@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>A special message for you!</h1>
+        <div id="result-message" style="font-size: 20px;"></div>
+        <p id="final-score"></p>
+    </div>
+
+    <script>
+        // Get the score from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = urlParams.get('score');
+
+        // Display a message based on the score
+        let message = "";
+
+        if (score === "5") {
+            message = `
+            As we step into this new year, I just want to take a moment to thank you for being such an incredible part of my life—someone who makes every day better, no matter what.
+            You have always been my constant source of happiness, peace, and support. Here is to our 4th New Year together, indeed a long journey, right?
+            I look forward to creating even more unforgettable memories with you in the years ahead. Wishing you a Happy New Year filled with all the love and success you deserve!
+        `;
+
+        } else if (score >= "3") {
+            message = "Great job! You got most of the answers right!";
+        } else {
+            message = "Well done! But there are a few more things we need to remember together.";
+        }
+
+        // Display the result message and the final score
+        document.getElementById("result-message").textContent = message;
+        
+    </script>
+</body>
+</html>

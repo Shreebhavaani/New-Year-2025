@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Quiz</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Happy New Year, Mr.innocent!</h1>
+        <p style="font-size: 30px; color: rgb(255, 77, 0);">Cheers to new beginnings and endless possibilities 🥂</p>
+
+        <form id="quiz-form" action="result.html" method="GET">
+            <div class="question">
+                <label for="question1">1. What’s something I always thank you for?</label>
+                <input type="text" id="question1" name="question1" placeholder="Type your answer here" required>
+            </div>
+
+            <div class="question">
+                <label for="question2">2. What’s a food we both loved to eat together this year?</label>
+                <input type="text" id="question2" name="question2" placeholder="Type your answer here" required>
+            </div>
+
+            <div class="question">
+                <label for="question3">3. Which is a day from this year we'll always treasure?</label>
+                <input type="text" id="question3" name="question3" placeholder="Type your answer here" required>
+            </div>
+
+            <div class="question">
+                <label for="question4">4. What is one thing we both love doing but never get the chance to do often?</label>
+                <input type="text" id="question4" name="question4" placeholder="Type your answer here" required>
+            </div>
+
+            <div class="question">
+                <label for="question5">5. What’s one thing you know I would always do for you without a second thought?</label>
+                <input type="text" id="question5" name="question5" placeholder="Type your answer here" required>
+            </div>
+
+            <button type="submit" class="button">Submit Answers</button>
+        </form>
+         <!-- Display score on the same page -->
+         <div id="score-container">
+            <p>Your score: <span id="score">0</span>/5</p>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
